@@ -24,7 +24,6 @@
 		    background-color: aquamarine;
 		    height: 1px;
 		    display: flex;
-
 		    transition: 1s;
 		}
 
@@ -36,15 +35,15 @@
   			 53% {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   			 transform: translate3d(0,0,0);}
   			 70% {animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  			 transform: translate3d(0, -15px, 0);}
+  			 transform: translate3d(0, -15px, 0); height: 4px;}
   			 80% {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   			 transform: translate3d(0,0,0);}
-  			 90% {transform: translate3d(0,-4px,0);}
+  			 90% {transform: translate3d(0,-4px,0); height: 1px;}
   			}
 
   			.tab.selected {
 				  animation-name: tab;
-				  animation-duration:5s;
+				  animation-duration: .5s;
 				
 				}
 
@@ -106,7 +105,7 @@ $( ".tab" ).mouseover(function() {
 			});
 			
 			function getRandomColor() {
-			  var letters = 'ABC99';
+			  var letters = 'ABCDEF';
 			  var color = '#0';
 			  for (var i = 0; i < 5; i++) {
 			    color += letters[Math.floor(Math.random() * 16)];
@@ -121,10 +120,6 @@ $(".tab").mouseover(function(){
        
     });
 
-$(".tab").mouseover(function(){
-				var size = Math.floor(20+Math.random()*10);
-				$(this).css("height",size);
-		});
 
 		
 

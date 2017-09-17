@@ -9,11 +9,13 @@
   		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+
 	<style>
 
 	body{
 		margin: 0px;
 		padding:-100px;
+		overflow: hidden;
 	}
 
 	.tab {
@@ -23,63 +25,65 @@
 		    background-color: aquamarine;
 		    height: 1px;
 		    display: flex;
+		    transition: .5s ease;
 
-		    transition: 1s;
 		}
+
 
 
 	</style>
 	</head>
 
 	<body>
-
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-	<div class="tab"></div>
-
-
-
-
 	
-	
+
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+
+
+
 
 
 <script> 
 
 
 
-$( ".tab" ).mouseover(function() {
+			$( ".tab" ).mouseover(function() {
 			  $(this).css("background-color", getRandomColor());
 			});
 			
@@ -95,10 +99,13 @@ $( ".tab" ).mouseover(function() {
 			$(".tab").mouseover(function(){
 				var size = Math.floor(20+Math.random()*500);
 				$(this).css("width",size);
-		});
+			});
 
 
-		
+
+
+
+
 
 </script>
 
