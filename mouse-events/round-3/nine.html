@@ -1,0 +1,186 @@
+
+
+  <DOCTYPE!html>
+<html>
+
+	<head>
+		<title>9</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	<style>
+
+.area{
+	width: 100%;
+}
+
+.area,
+.area .tab .shape {
+   position: absolute;
+   top: 10%;
+   left: 10%;
+   right: 10%;
+   bottom: 10%;
+   transform: translate(-50%, -50%);
+}
+
+.area .tab {
+   width: 75px;
+   height: 75px;
+   float: right;
+   position: relative;
+}
+
+.area .tab .shape {
+   width: 80%;
+   /*height: 5px;*/
+   border: 1px aquamarine solid;
+}
+
+body {
+   background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   width: 100%;
+}
+
+
+
+
+
+
+
+
+	</style>
+
+	</head>
+
+	<body>
+
+
+	<div class="area">
+   		<div class="area-in">
+
+
+   	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>   	
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>	
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+<div class="tab"></div>
+
+
+   		</div>
+	</div>
+
+
+
+	<script>
+
+	$(function() {
+
+   for (var i = 0; i < 200; i++) {
+      $(".area-in").append('<span class="tab"><span class="shape"></span></span>')
+   }
+
+   document.addEventListener("mousemove", function(e) {
+      for (var l = 0; l < $(".tab").length; l++) {
+         $(".tab:nth-child(" + (l + 1) + ")").each(function() {
+            var offset = $(this).offset(),
+               center_x = (offset.left) + ($(this).width() / 2),
+               center_y = (offset.top) + ($(this).height() / 2),
+               mouse_x = e.pageX,
+               mouse_y = e.pageY,
+               radians = Math.atan2(mouse_x - center_x, mouse_y - center_y),
+               degree = (radians * (180 / Math.PI) * -1) + 90;
+            $(this).css('transform', 'rotate(' + degree + 'deg)');
+         })
+      }
+   })
+});
+
+	$( ".tab" ).mouseover(function() {
+			  $(this).css("background-color", getRandomColor());
+			});
+			
+
+	function getRandomColor() {
+			  var letters = 'ABCDEF';
+			  var color = '#F';
+			  for (var i = 0; i < 2; i++) {
+			    color += letters[Math.floor(Math.random() * 16)];
+			  }
+			  return color;
+			};
+
+
+			$(".tab").mouseover(function(){
+        	$(this).toggleClass("selected");
+    	});
+
+
+
+
+	
+
+
+	</script>
+
+
+	</body>
+</html>

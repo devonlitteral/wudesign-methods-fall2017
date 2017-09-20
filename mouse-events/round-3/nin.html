@@ -1,8 +1,10 @@
-<DOCTYPE!html>
+
+
+  <DOCTYPE!html>
 <html>
 
 	<head>
-		<title>7</title>
+		<title>8</title>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -16,42 +18,42 @@
 	<style>
 
 	.area {
-   width: 40%;
-   height: 50%;
+   width: 50%;
+   height: 30%;
    
    margin: 0;
    padding: 0;
    float: center;
-   opacity: 0.7;
+   display: inline-flex;
 
 }
 
 .area,
 .area .tab /*.shape*/ {
-   position: inherit;
-   top: 10%;
-   left: 50%;
-   /*transform: translate(-50%, -50%);*/
+   position: relative;
+   top: 20%;
+   bottom: 20%;
+   left: 30%;
+   transform: translate(-50%, -50%);
 }
 
 .area .tab {
-   width: 100%;
-   height: 100%;
+   width: 90%;
+   height: 90%;
    float: center;
    position: relative;
 }
 
 .area .tab /*.shape*/ {
-   width: 100%;
+   width: 10%;
    height: 2px;
-   background: #ff6f69;
-   margin-top: 2%;
-
+   margin-top: 0.5%;
+   border: .5px solid #f7f7f7;
 }
 
 body {
-   background: #50394c;
    overflow: hidden;
+   background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
 }
 
 *,
@@ -61,6 +63,22 @@ body {
    margin: 0;
    padding: 0;
 }
+
+.tab {
+  /*flex: 1 1 auto;*/
+  margin: 10px;
+  padding: 5px;
+  border: .5px solid #f7f7f7;
+  overflow:hidden;
+  transition: .5s;
+}
+
+
+
+
+  
+
+
 
 
 	</style>
@@ -72,66 +90,45 @@ body {
 
 	<div class="area">
    		<div class="area-in">
-		   	<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>   	<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>   	<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
-			<div class="tab"></div>
 
-	
+
+   	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>   	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
+	<div class="tab"></div>
 
 
    		</div>
@@ -175,7 +172,9 @@ body {
 	// 		    color += letters[Math.floor(Math.random() * 16)];
 	// 		  }
 	// 		  return color;
-	// 		};
+	// 		}
+
+
 
 
 
