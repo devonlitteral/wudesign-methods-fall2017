@@ -1,0 +1,175 @@
+<DOCTYPE!html>
+<html>
+
+	<head>
+		<title>2</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+	<style>
+
+.area {
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   margin-left: 150px;
+   position: absolute;
+
+}
+
+.area,
+.area .tab /*.shape*/ {
+   position: inherit;
+   transform: translate(-45%, -45%);
+}
+
+.area .tab {
+   width: 50%;
+   height: 2px;
+   position: relative;
+   background: white;
+   margin-top: 0.4%;
+   opacity: 0.5;
+   transition: 0.1s ease-in;
+
+}
+
+body {
+	margin-top: 25%;
+	margin-left: 50%;
+   	overflow: hidden;
+   	transition: 1s ease;
+   	cursor: crosshair;
+	background: linear-gradient(300deg, #ff5129, #ffde29, #38c0ff, #ffa8e5, #983eff);
+	background-size: 1200% 1200%;
+	-webkit-animation: gradientanimation 200s ease infinite;
+	-moz-animation: gradientanimation 200s ease infinite;
+	animation: gradientanimation 200s ease infinite;
+}
+	@keyframes gradientanimation { 
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+
+
+
+
+
+
+	</style>
+
+	</head>
+
+	<body>
+
+
+	<div class="area">
+   		<div class="area-in">
+		   	<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>	
+			<div class="tab"></div><div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+			<div class="tab"></div>
+		
+			
+
+   		</div>
+	</div>
+
+
+
+
+
+	<script>
+
+
+$(function() {
+
+   for (var i = 0; i < 64; i++) {
+      $(".area-in").append('<span class="tab"><span class="shape"></span></span>')
+   }
+
+   document.addEventListener("mousemove", function(e) {
+      for (var l = 0; l < $(".tab").length; l++) {
+         $(".tab:nth-child(" + (l + 1) + ")").each(function() {
+            var offset = $(this).offset(),
+               center_x = (offset.left) + ($(this).width() / 2),
+               center_y = (offset.top) + ($(this).height() / 2),
+               mouse_x = e.pageX,
+               mouse_y = e.pageY,
+               radians = Math.atan2(mouse_x - center_x, mouse_y - center_y),
+               degree = (radians * (360 / Math.PI) * -1) + 90;
+            $(this).css('transform', 'rotate(' + degree + 'deg)');
+         })
+      }
+   })
+});
+
+
+
+
+
+
+
+	</script>
+
+
+	</body>
+</html>
