@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>5</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    
+   <style>
+   body {
+  font-family: Helvetica,Tahoma;
+
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.aos-all {
+  width: 1000px;
+  max-width: 98%;
+  margin: 10vh auto 0 auto;
+  transition-duration: 2s;
+}
+
+.aos-item {
+  display: inline-block;
+  float: left;
+  width: 33%;
+  height: 300px;
+  padding: 100px;
+}
+
+.aos-item__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: lavender;
+  line-height: 260px;
+  text-align: center;
+  color: #fff;
+}
+
+}</style>
+   
+  </head>
+  <body>
+    <div id="transcroller-body" class="aos-all">
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="zoom-out-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="flip-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="flip-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-in">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-in">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-in">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-in">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="zoom-out">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="zoom-out">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="fade-in">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="zoom-out-up">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+      <div class="aos-item" data-aos="zoom-out-down">
+        <div class="aos-item__inner"><h3></h3></div>
+      </div>
+
+
+    <script src="dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
+    <script>
+      requirejs.config({
+          baseUrl: 'dist',
+      });
+
+      require(['aos'], function(AOS){
+          AOS.init({
+              easing: 'ease-in-out-sine'
+          });
+      });
+    </script>
+  </body>
+</html>
