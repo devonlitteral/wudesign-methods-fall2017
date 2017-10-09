@@ -1,0 +1,181 @@
+<DOCTYPE!html>
+<html>
+
+	<head>
+		<title>experiment 1</title>
+
+		<style>
+
+		body{
+		  font-family: arial, sans-serif;
+		  transition: ease;
+		}
+		  
+		.content{
+		  height: 5000px
+		}
+
+		.wrapper{
+		  display: flex;
+		  justify-content:center;
+		  align-items:(center);
+		  size: (100% 100vh);
+		  position: fixed, 0px null null 0px;
+		  padding-top: 28%;
+		}
+		  
+		.box{
+		  flex: none;
+		  size: 30%;
+		  width: 10%;
+		  line-height: 200px;
+		  text-align: center;
+		  font-size: 25px;
+		  background: lavender;
+		  color: white;
+		}
+
+		.b1{
+			background-color: lightcoral;
+			position: fixed;
+			margin: auto;
+		  	top: 0; left: 0; right: 0;  bottom: 0;
+		  	z-index: -999;
+		}
+
+		.b21{
+			background-color: violet;
+			height: 30%;
+			width:10%;
+		}
+
+		.b22{
+			background-color: #6FEEFF;
+			height: 30%;
+			width:10%;
+		}
+
+		.b23{
+			background-color: aquamarine;
+			height: 30%;
+			width:10%;
+		}
+
+		.b24{
+			background-color: coral;
+			height: 30%;
+			width:10%;
+		}
+
+		.b25{
+			background-color: violet;
+			height: 30%;
+			width:10%;
+		}
+
+		.b26{
+			background-color: palegreen;
+			height: 30%;
+			width:10%;
+		}
+
+		.b27{
+			background-color: aquamarine;
+			height: 30%;
+			width:10%;
+		}
+
+		</style>
+
+	</head>
+
+	<body>
+
+	<div class="content">
+  		<div class="wrapper">
+  			<div class="box" data-scroll-speed="1">h</div>
+  			<div class="box" data-scroll-speed="1">e</div>
+		    <div class="box" data-scroll-speed="2">l</div>
+		    <div class="box" data-scroll-speed="3">l</div>
+		    <div class="box" data-scroll-speed="5">o</div>
+		    <div class="box" data-scroll-speed="4">o</div>
+		    <div class="box" data-scroll-speed="3">o</div>
+		    <div class="box" data-scroll-speed="2">o</div>
+		    <div class="box" data-scroll-speed="1">o</div>
+		    <div class="box" data-scroll-speed="1">o</div>
+	  </div>
+	</div>
+
+	<div class="b1"></div>
+
+<div class="stay3" data-6000="background: linear-gradient(-90deg, red, yellow); opacity: 0;" data-6100="background: linear-gradient(-90deg, red, yellow); opacity: 1;" data-6200="background: linear-gradient(-180deg, red, yellow); opacity: 1;" data-6300="background: linear-gradient(90deg, red, yellow); opacity: 1;" data-6400="background: linear-gradient(180deg, red, yellow); opacity: 1;"></div>
+
+
+
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+	<script>
+
+		$.fn.moveIt = function(){
+		  var $window = $(window);
+		  var instances = [];
+		  
+		  $(this).each(function(){
+		    instances.push(new moveItItem($(this)));
+		  });
+		  
+		  window.onscroll = function(){
+		    var scrollTop = $window.scrollTop();
+		    instances.forEach(function(inst){
+		      inst.update(scrollTop);
+		    });
+		  }
+		}
+
+		var moveItItem = function(el){
+		  this.el = $(el);
+		  this.speed = parseInt(this.el.attr('data-scroll-speed'));
+		};
+
+		moveItItem.prototype.update = function(scrollTop){
+		  this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
+		};
+
+		// Initialization
+		$(function(){
+		  $('[data-scroll-speed]').moveIt();
+		});
+
+		var setSkrollr = function($el, data) {
+    for (var i = 0, l = data.length; i < l; i++) {
+        var d = data[i],
+            px = d[0];
+            css = d[1];
+        $el.attr('data-' + px, css);
+    }
+}
+
+jQuery(function($) {
+    setSkrollr($('.b1'), [[0, 'width:0%;'], [1500, 'width:100%;']]);
+    setSkrollr($('.b2'), [[0, 'transform:translateX(-100%)'], [750, 'transform:translateX(100%)'], [1500, 'transform:translateX(-100%)']]);
+    setSkrollr($('.b3'), [[0, 'height:0%'], [1500, 'height:100%']]);
+    setSkrollr($('.b4'), [[0, 'transform:rotateX(0deg)'], [750, 'transform:rotateX(180deg)'], [1500, 'transform:rotateX(360deg']]);
+    setSkrollr($('.b5'), [[0, 'transform:rotateY(0deg)'], [750, 'transform:rotateY(180deg)'], [1500, 'transform:rotateY(360deg']]);
+    setSkrollr($('.b6'), [[0, 'transform:rotate(0deg)'], [750, 'transform:rotate(180deg)'], [1500, 'transform:rotate(360deg']]);
+    
+    skrollr.init({
+        smoothScrolling: false
+    });
+});
+
+
+
+	</script>
+
+	</body>
+
+</html>

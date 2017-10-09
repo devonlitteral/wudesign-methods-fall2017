@@ -1,0 +1,103 @@
+<DOCTYPE!html>
+<html>
+
+	<head>
+		<title>experiment 1</title>
+
+		<style>
+
+		body{
+		  font-family: arial, sans-serif
+		}
+		  
+		.content{
+		  height: 5000px
+		}
+
+		.wrapper{
+		  display: flex;
+		  justify-content:center;
+		  align-items:(center);
+		  size: (100% 100vh);
+		  position: fixed, 0px null null 0px;
+		  padding-top: 28%;
+		}
+		  
+		.box{
+		  flex: none;
+		  size: 30%;
+		  width: 10%;
+		  line-height: 200px;
+		  text-align: center;
+		  font-size: 25px;
+		  background: aquamarine;
+		  color: white;
+
+		</style>
+
+	</head>
+
+	<body>
+
+	<div class="content">
+  		<div class="wrapper">
+  			<div class="box" data-scroll-speed="1"></div>
+  			<div class="box" data-scroll-speed="2"></div>
+		    <div class="box" data-scroll-speed="3">S</div>
+		    <div class="box" data-scroll-speed="4">C</div>
+		    <div class="box" data-scroll-speed="5">R</div>
+		    <div class="box" data-scroll-speed="6">O</div>
+		    <div class="box" data-scroll-speed="4">L</div>
+		    <div class="box" data-scroll-speed="3">L</div>
+		    <div class="box" data-scroll-speed="2"></div>
+		    <div class="box" data-scroll-speed="1"></div>
+	  </div>
+	</div>
+
+
+
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="https://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
+	<script>
+
+		$.fn.moveIt = function(){
+		  var $window = $(window);
+		  var instances = [];
+		  
+		  $(this).each(function(){
+		    instances.push(new moveItItem($(this)));
+		  });
+		  
+		  window.onscroll = function(){
+		    var scrollTop = $window.scrollTop();
+		    instances.forEach(function(inst){
+		      inst.update(scrollTop);
+		    });
+		  }
+		}
+
+		var moveItItem = function(el){
+		  this.el = $(el);
+		  this.speed = parseInt(this.el.attr('data-scroll-speed'));
+		};
+
+		moveItItem.prototype.update = function(scrollTop){
+		  this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
+		};
+
+		// Initialization
+		$(function(){
+		  $('[data-scroll-speed]').moveIt();
+		});
+
+
+
+	</script>
+
+	</body>
+
+</html>

@@ -6,19 +6,39 @@
     },
     {
       "name" : "2",
-      "file" : "scroll2.html"
+      "file" : "two.html"
     },
     {
       "name" : "3",
-      "file" : "scroll3.html"
+      "file" : "three.html"
     },
     {
       "name" : "4",
-      "file" : "scroll4.html"
+      "file" : "four.html"
     },
     {
       "name" : "5",
-      "file" : "scroll5.html"
+      "file" : "five.html"
+    },
+    {
+      "name" : "6",
+      "file" : "six.html"
+    },
+    {
+      "name" : "7",
+      "file" : "seven.html"
+    },
+    {
+      "name" : "8",
+      "file" : "eight.html"
+    },
+    {
+      "name" : "9",
+      "file" : "nine.html"
+    },
+    {
+      "name" : "10",
+      "file" : "ten.html"
     }
 
   ]
