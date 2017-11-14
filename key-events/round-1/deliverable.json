@@ -1,0 +1,44 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "show key pressed",
+      "file" : "index.html"
+    },
+    {
+      "name" : "snakey",
+      "file" : "two.html"
+    },
+    {
+      "name" : "drum sounds",
+      "file" : "three.html"
+    },
+    {
+      "name" : "styled drum sounds",
+      "file" : "four.html"
+    },
+    {
+      "name" : "piano!!!",
+      "file" : "five.html"
+    },
+    {
+      "name" : "piano notes in order",
+      "file" : "six.html"
+    },
+    {
+      "name" : "weird ass harp",
+      "file" : "seven.html"
+    },
+    {
+      "name" : "key transition",
+      "file" : "eight.html"
+    },
+    {
+      "name" : "9",
+      "file" : "nine.html"
+    },
+    {
+      "name" : "10",
+      "file" : "ten.html"
+    }
+  ]
+}

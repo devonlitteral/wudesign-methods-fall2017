@@ -1,0 +1,79 @@
+<html>
+<head>
+</head>
+<style>
+
+#board {
+  width: 400px;
+  height: 300px;
+  border: 1px solid #444;
+  overflow: hidden;
+  position: relative;
+  margin: 10%;
+  margin-left: 33%;
+}
+
+</style>
+<body>
+
+<div id="board"></div>
+
+<script>
+
+var dvPlayRegion = document.querySelector("#board");
+
+var objPlayer = {
+  size: "20px",
+  color: "#99FF99",
+  x: 100,
+  y: 100
+}
+
+//make the player object using its data
+var dvPlayer = document.createElement('div');
+dvPlayer.style.width = objPlayer.size;
+dvPlayer.style.height= objPlayer.size;
+dvPlayer.style.left = objPlayer.x + "px";
+dvPlayer.style.top = objPlayer.y + "px";
+dvPlayer.style.position = "absolute";
+dvPlayer.style.backgroundColor = objPlayer.color;
+dvPlayRegion.appendChild(dvPlayer);
+
+//add event listeners
+document.addEventListener("keydown", onKeyDown);
+
+//application methods
+function onKeyDown(event) {
+  
+  //to see the keycode of the button that has been pressed
+  //console.log(event.keyCode);
+  if(event.keyCode == 37) {
+     //left
+    objPlayer.x --;
+  }
+  
+  if(event.keyCode == 39) {
+    //right
+    objPlayer.x ++;
+  }
+  
+  if(event.keyCode == 38) {
+    //up
+    objPlayer.y --;
+  }
+  
+  if(event.keyCode == 40) {
+    //down
+    objPlayer.y ++;
+  }
+  
+  //reposition
+  dvPlayer.style.left = objPlayer.x + "px";
+  dvPlayer.style.top = objPlayer.y + "px";
+}
+
+
+
+</script>
+</body>
+</html>
