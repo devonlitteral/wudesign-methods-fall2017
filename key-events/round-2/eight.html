@@ -1,0 +1,323 @@
+<html>
+<head>
+</head>
+<style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+html, body {
+  margin: 1%;
+  padding: 0;
+  font-family: sans-serif;
+  width: 90%;
+  height:100%;
+  overflow: hidden;
+
+}
+
+
+.key {
+  width: 1%;
+  height: 4px;
+  margin: 1px;
+  text-align: right;
+  background-color: dodgerblue;
+  transition: all .07s ease;
+  padding: 6px;
+}
+
+
+kbd {
+  display: block;
+  font-size: 8px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: white;
+}
+
+.sound {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.playing {
+  width: 70%;
+  background: tomato;
+  transition: 1s ease-in-out;
+
+}
+
+.playing .sound {
+  color: #7adcff;
+}
+
+h1{
+  font-size: 12px;
+  float: right;
+  color: tomato;
+}
+</style>
+
+<body>
+
+  <h1> type a story and listen to it's song </h1>
+
+
+  <div data-key="49" class="key">
+    <kbd>1</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="50" class="key">
+    <kbd>2</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="51" class="key">
+    <kbd>3</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="52" class="key">
+    <kbd>4</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="53" class="key">
+    <kbd>5</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="54" class="key">
+    <kbd>6</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="55" class="key">
+    <kbd>7</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="56" class="key">
+    <kbd>8</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="57" class="key">
+    <kbd>9</kbd>
+    <span class="sound"></span>
+  </div>
+    <div data-key="48" class="key">
+    <kbd>0</kbd>
+    <span class="sound"></span>
+  </div>
+
+
+
+
+
+
+    <div data-key="81" class="key">
+    <kbd>Q</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="87" class="key">
+    <kbd>W</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="69" class="key">
+    <kbd>E</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="82" class="key">
+    <kbd>R</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="84" class="key">
+    <kbd>T</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="89" class="key">
+    <kbd>Y</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="85" class="key">
+    <kbd>U</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="73" class="key">
+    <kbd>I</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="79" class="key">
+    <kbd>O</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="80" class="key">
+    <kbd>P</kbd>
+    <span class="sound"></span>
+  </div>
+
+
+  <div data-key="65" class="key">
+    <kbd>A</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="83" class="key">
+    <kbd>S</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="68" class="key">
+    <kbd>D</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="70" class="key">
+    <kbd>F</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="71" class="key">
+    <kbd>G</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="72" class="key">
+    <kbd>H</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="74" class="key">
+    <kbd>J</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="75" class="key">
+    <kbd>K</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="76" class="key">
+    <kbd>L</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="186" class="key">
+    <kbd>;</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="222" class="key">
+    <kbd>'</kbd>
+    <span class="sound"></span>
+  </div>
+
+
+  <div data-key="90" class="key">
+    <kbd>Z</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="88" class="key">
+    <kbd>X</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="67" class="key">
+    <kbd>C</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="86" class="key">
+    <kbd>V</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="66" class="key">
+    <kbd>B</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="78" class="key">
+    <kbd>N</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="77" class="key">
+    <kbd>M</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="188" class="key">
+    <kbd>,</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="190" class="key">
+    <kbd>.</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="191" class="key">
+    <kbd>/</kbd>
+    <span class="sound"></span>
+  </div>
+
+
+<audio data-key="49" src="piano/001.wav"></audio>   
+<audio data-key="50" src="piano/002.wav"></audio> 
+<audio data-key="51" src="piano/003.wav"></audio> 
+<audio data-key="52" src="piano/004.wav"></audio> 
+<audio data-key="53" src="piano/005.wav"></audio> 
+<audio data-key="54" src="piano/006.wav"></audio> 
+<audio data-key="55" src="piano/007.wav"></audio> 
+<audio data-key="56" src="piano/008.wav"></audio> 
+<audio data-key="57" src="piano/009.wav"></audio> 
+<audio data-key="48" src="piano/010.wav"></audio>
+
+<audio data-key="81" src="piano/011.wav"></audio> 
+<audio data-key="87" src="piano/012.wav"></audio>
+<audio data-key="69" src="piano/013.wav"></audio>   
+<audio data-key="82" src="piano/014.wav"></audio> 
+<audio data-key="84" src="piano/015.wav"></audio>
+<audio data-key="89" src="piano/016.wav"></audio> 
+<audio data-key="85" src="piano/017.wav"></audio>  
+<audio data-key="73" src="piano/018.wav"></audio> 
+<audio data-key="79" src="piano/019.wav"></audio> 
+<audio data-key="80" src="piano/020.wav"></audio> 
+
+<audio data-key="65" src="piano/021.wav"></audio>
+<audio data-key="83" src="piano/022.wav"></audio>
+<audio data-key="68" src="piano/023.wav"></audio>
+<audio data-key="70" src="piano/024.wav"></audio>
+<audio data-key="71" src="piano/025.wav"></audio>
+<audio data-key="72" src="piano/026.wav"></audio>
+<audio data-key="74" src="piano/027.wav"></audio>
+<audio data-key="75" src="piano/028.wav"></audio>
+<audio data-key="76" src="piano/029.wav"></audio>
+<audio data-key="186" src="piano/030.wav"></audio> 
+<audio data-key="222" src="piano/031.wav"></audio> 
+
+<audio data-key="90" src="piano/032.wav"></audio> 
+<audio data-key="88" src="piano/033.wav"></audio>
+<audio data-key="67" src="piano/034.wav"></audio> 
+<audio data-key="86" src="piano/035.wav"></audio> 
+<audio data-key="66" src="piano/036.wav"></audio> 
+<audio data-key="78" src="piano/037.wav"></audio> 
+<audio data-key="77" src="piano/038.wav"></audio> 
+<audio data-key="188" src="piano/039.wav"></audio> 
+<audio data-key="190" src="piano/040.wav"></audio> 
+<audio data-key="191" src="piano/041.wav"></audio> 
+
+
+
+
+
+<script>
+
+function playSound(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  if (!audio) return;
+  audio.currentTime = 0;
+  audio.play();
+  key.classList.add('playing');
+}
+
+function removeTransition(e) {
+  if (e.propertyName !== 'width') return;
+  this.classList.remove('playing');
+}
+
+const keys = document.querySelectorAll('.key');
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playSound);
+window.addEventListener('mousedown', playSound);
+
+
+
+
+</script>
+</body>
+</html>

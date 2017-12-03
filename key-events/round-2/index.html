@@ -1,0 +1,129 @@
+<html>
+<head>
+</head>
+<style>
+
+html {
+  font-size: 10px;
+}
+
+html, body {
+  margin: 2%;
+  padding: 0;
+  font-family: sans-serif;
+  width: 90%;
+  height:100%;
+
+}
+
+
+.key {
+  margin: 10px;
+  width: 10%;
+  text-align: center;
+  background-color: lightblue;
+  padding: 10px;
+  transition: all .07s ease;
+}
+
+
+kbd {
+  display: block;
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.sound {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.playing {
+  width: 50%;
+  background: lightblue;
+  transition: 1s ease-in-out;
+}
+
+.playing .sound {
+  color: #7adcff;
+}
+</style>
+
+<body>
+
+
+  <div data-key="65" class="key">
+    <kbd>A</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="83" class="key">
+    <kbd>S</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="68" class="key">
+    <kbd>D</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="70" class="key">
+    <kbd>F</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="71" class="key">
+    <kbd>G</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="72" class="key">
+    <kbd>H</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="74" class="key">
+    <kbd>J</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="75" class="key">
+    <kbd>K</kbd>
+    <span class="sound"></span>
+  </div>
+  <div data-key="76" class="key">
+    <kbd>L</kbd>
+    <span class="sound"></span>
+  </div>
+
+<audio data-key="65" src="resources/harp/harp001.wav"></audio>
+<audio data-key="83" src="resources/harp/harp002.wav"></audio>
+<audio data-key="68" src="resources/harp/harp003.wav"></audio>
+<audio data-key="70" src="resources/harp/harp004.wav"></audio>
+<audio data-key="71" src="resources/harp/harp005.wav"></audio>
+<audio data-key="72" src="resources/harp/harp006.wav"></audio>
+<audio data-key="74" src="resources/harp/harp007.wav"></audio>
+<audio data-key="75" src="resources/harp/harp008.wav"></audio>
+<audio data-key="76" src="resources/harp/harp009.wav"></audio>
+
+
+<script>
+
+function playSound(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  if (!audio) return;
+  audio.currentTime = 0;
+  audio.play();
+  key.classList.add('playing');
+}
+
+function removeTransition(e) {
+  if (e.propertyName !== 'width') return;
+  this.classList.remove('playing');
+}
+
+const keys = document.querySelectorAll('.key');
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playSound);
+window.addEventListener('mousedown', playSound);
+
+</script>
+</body>
+</html>

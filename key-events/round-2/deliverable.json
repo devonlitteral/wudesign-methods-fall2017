@@ -1,0 +1,36 @@
+{
+  "entrypoints" : [
+    {
+      "name" : "different style",
+      "file" : "index.html"
+    },
+    {
+      "name" : "smaller",
+      "file" : "two.html"
+    },
+    {
+      "name" : "more sounds",
+      "file" : "three.html"
+    },
+    {
+      "name" : "even more sounds",
+      "file" : "four.html"
+    },
+    {
+      "name" : "sounds with color",
+      "file" : "five.html"
+    },
+    {
+      "name" : "sounds with different color",
+      "file" : "six.html"
+    },
+    {
+      "name" : "smaller again",
+      "file" : "seven.html"
+    },
+    {
+      "name" : "EVEN SMALLER",
+      "file" : "eight.html"
+    }
+  ]
+}
